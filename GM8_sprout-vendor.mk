@@ -933,6 +933,7 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdmdetect.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdsprpc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libminikin-v27.so:$(TARGET_COPY_OUT_VENDOR)/lib/libminikin-v27.so \
+	vendor/GM/GM8_sprout/proprietary/vendor/lib/libshim_camera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libshim_camera.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-color-convertor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-qcamera.so \
@@ -1468,6 +1469,7 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-color-convertor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
+	vendor/GM/GM8_sprout/proprietary/vendor/lib64/libshim_camera.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libshim_camera.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera2_frame_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_frame_algorithm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera2_is.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_is.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera2_q3a_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_q3a_core.so \
