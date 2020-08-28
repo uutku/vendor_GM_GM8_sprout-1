@@ -1,5 +1,4 @@
 # Copyright (C) 2019 The LineageOS Project
-# Copyright (C) 2019 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,55 +18,105 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/GM/GM8_sprout
 
 PRODUCT_COPY_FILES += \
-    vendor/GM/GM8_sprout/proprietary/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM)/bin/perfservice \
-    vendor/GM/GM8_sprout/proprietary/bin/sigma_miracasthalservice:$(TARGET_COPY_OUT_SYSTEM)/bin/sigma_miracasthalservice \
+    vendor/GM/GM8_sprout/proprietary/bin/dpmd:$(TARGET_COPY_OUT_SYSTEM)/bin/dpmd \
     vendor/GM/GM8_sprout/proprietary/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM)/bin/wfdservice \
-    vendor/GM/GM8_sprout/proprietary/etc/bluetooth/bt_configstore.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_configstore.conf \
-    vendor/GM/GM8_sprout/proprietary/etc/bluetooth/bt_did.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_did.conf \
-    vendor/GM/GM8_sprout/proprietary/etc/bluetooth/bt_profile.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_profile.conf \
-    vendor/GM/GM8_sprout/proprietary/etc/bluetooth/bt_stack.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_stack.conf \
-    vendor/GM/GM8_sprout/proprietary/etc/bluetooth/interop_database.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/interop_database.conf \
+    vendor/GM/GM8_sprout/proprietary/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/dpm/dpm.conf \
     vendor/GM/GM8_sprout/proprietary/etc/firmware/ice40.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/ice40.bin \
-    vendor/GM/GM8_sprout/proprietary/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc \
-    vendor/GM/GM8_sprout/proprietary/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/perfservice.rc \
+    vendor/GM/GM8_sprout/proprietary/etc/firmware/wlan/prima/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    vendor/GM/GM8_sprout/proprietary/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/dpmd.rc \
     vendor/GM/GM8_sprout/proprietary/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/wfdservice.rc \
-    vendor/GM/GM8_sprout/proprietary/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/wlc_model.tflite \
     vendor/GM/GM8_sprout/proprietary/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/audiosphere.xml \
-    vendor/GM/GM8_sprout/proprietary/etc/permissions/com.qti.snapdragon.sdk.display.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qti.snapdragon.sdk.display.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/cneapiclient.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/cneapiclient.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qti.dpmframework.xml \
     vendor/GM/GM8_sprout/proprietary/etc/permissions/com.qti.location.sdk.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qti.location.sdk.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.location.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/com.qualcomm.qti.imscmservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.imscmservice.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/com.quicinc.cne.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.quicinc.cne.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/dpmapi.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/embms.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/embms.xml \
     vendor/GM/GM8_sprout/proprietary/etc/permissions/izat.xt.srv.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/izat.xt.srv.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcrilhook.xml \
     vendor/GM/GM8_sprout/proprietary/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_libpermissions.xml \
     vendor/GM/GM8_sprout/proprietary/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_permissions.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/telephonyservice.xml \
+    vendor/GM/GM8_sprout/proprietary/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/GM/GM8_sprout/proprietary/etc/wfdconfig.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/wfdconfig.xml \
     vendor/GM/GM8_sprout/proprietary/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/wfdconfigsink.xml \
+    vendor/GM/GM8_sprout/proprietary/framework/QtiTelephonyServicelibrary.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/QtiTelephonyServicelibrary.jar \
     vendor/GM/GM8_sprout/proprietary/framework/audiosphere.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/audiosphere.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/cneapiclient.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/cneapiclient.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qti.dpmframework.jar \
     vendor/GM/GM8_sprout/proprietary/framework/com.qti.location.sdk.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qti.location.sdk.jar \
-    vendor/GM/GM8_sprout/proprietary/framework/com.qti.snapdragon.sdk.display.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qti.snapdragon.sdk.display.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.qualcomm.qti.uceservice-V2.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.api-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.api-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.api-V1.1-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.api-V1.1-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.constants-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.constants-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.constants-V2.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.constants-V2.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.constants-V2.1-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.constants-V2.1-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.server-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.server-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.server-V2.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.server-V2.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.server-V2.1-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.server-V2.1-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/com.quicinc.cne.server-V2.2-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.server-V2.2-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/dpmapi.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/dpmapi.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/embmslibrary.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/embmslibrary.jar \
     vendor/GM/GM8_sprout/proprietary/framework/izat.xt.srv.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/izat.xt.srv.jar \
-    vendor/GM/GM8_sprout/proprietary/lib/android.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.biometrics.fingerprint@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qcrilhook.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qti-telephony-common.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/tcmclient.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/tcmclient.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.data.factory-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.data.factory-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.hardware.alarm-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.hardware.data.latency-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.hardware.data.latency-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.hardware.soter-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.hardware.soter-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.ims.callinfo-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.ims.callinfo-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/framework/vendor.qti.latency-V2.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.qti.latency-V2.0-java.jar \
+    vendor/GM/GM8_sprout/proprietary/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.ant@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.imscmservice@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.imscmservice@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.qualcomm.qti.imscmservice@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.imscmservice@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.uceservice@2.0.so \
     vendor/GM/GM8_sprout/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/lib/extractors/libmmparserextractor.so:$(TARGET_COPY_OUT_SYSTEM)/lib/extractors/libmmparserextractor.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.api@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.api@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.api@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.constants@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.constants@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.constants@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.constants@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.constants@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.constants@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.server@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.server@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.server@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.server@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.server@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.server@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/com.quicinc.cne.server@2.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.quicinc.cne.server@2.2.so \
+    vendor/GM/GM8_sprout/proprietary/lib/extractors/libmmparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib/extractors/libmmparser.so \
     vendor/GM/GM8_sprout/proprietary/lib/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM)/lib/fm_helium.so \
-    vendor/GM/GM8_sprout/proprietary/lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/lib/lib-imscamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imscamera.so \
+    vendor/GM/GM8_sprout/proprietary/lib/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvideocodec.so \
+    vendor/GM/GM8_sprout/proprietary/lib/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvt.so \
+    vendor/GM/GM8_sprout/proprietary/lib/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtextutils.so \
+    vendor/GM/GM8_sprout/proprietary/lib/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtutils.so \
     vendor/GM/GM8_sprout/proprietary/lib/libFileMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libFileMux.so \
     vendor/GM/GM8_sprout/proprietary/lib/libOmxMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libOmxMux.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libbluetooth_qti.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libbluetooth_qti.so \
+    vendor/GM/GM8_sprout/proprietary/lib/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdiag_system.so \
+    vendor/GM/GM8_sprout/proprietary/lib/libdpmctmgr.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdpmctmgr.so \
+    vendor/GM/GM8_sprout/proprietary/lib/libdpmfdmgr.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdpmfdmgr.so \
+    vendor/GM/GM8_sprout/proprietary/lib/libdpmframework.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdpmframework.so \
+    vendor/GM/GM8_sprout/proprietary/lib/libdpmtcm.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdpmtcm.so \
     vendor/GM/GM8_sprout/proprietary/lib/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libfm-hci.so \
+    vendor/GM/GM8_sprout/proprietary/lib/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimscamera_jni.so \
+    vendor/GM/GM8_sprout/proprietary/lib/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsmedia_jni.so \
     vendor/GM/GM8_sprout/proprietary/lib/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmosal.so \
     vendor/GM/GM8_sprout/proprietary/lib/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmparser_lite.so \
     vendor/GM/GM8_sprout/proprietary/lib/libmmrtpdecoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmrtpdecoder.so \
     vendor/GM/GM8_sprout/proprietary/lib/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmrtpencoder.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqmi_cci_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqmi_cci_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqspmsvc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqspmsvc.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqti-at.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqti-at.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqti-iopd-client_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqti-iopd-client_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqti-perfd-client_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqti-perfd-client_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqti-util_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqti-util_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqti_performance.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqti_performance.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqti_vndfwk_detect.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libskia.so:$(TARGET_COPY_OUT_VENDOR)/lib/libskia.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libtrueportrait.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtrueportrait.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libvndfwk_detect_jni.qti.so \
+    vendor/GM/GM8_sprout/proprietary/lib/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/librcc.so \
     vendor/GM/GM8_sprout/proprietary/lib/libwfdavenhancements.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdavenhancements.so \
     vendor/GM/GM8_sprout/proprietary/lib/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdclient.so \
     vendor/GM/GM8_sprout/proprietary/lib/libwfdcodecv4l2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfdcodecv4l2.so \
@@ -85,340 +134,216 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/lib/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcsinkinterface.so \
     vendor/GM/GM8_sprout/proprietary/lib/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcsrc.so \
     vendor/GM/GM8_sprout/proprietary/lib/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwfduibcsrcinterface.so \
-    vendor/GM/GM8_sprout/proprietary/lib/libxt_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libxt_native.so \
-    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/android.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.biometrics.fingerprint@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/extractors/libmmparserextractor.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/extractors/libmmparser.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.display.color@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.display.color@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.display.color@1.2.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.display.postproc@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.esepowermanager@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@1.2.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.gnss@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.data.dynamicdds@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.data.latency@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.scve.objecttracker@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.scve.objecttracker@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.scve.panorama@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.scve.panorama@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.hardware.vpp@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.ims.callinfo@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.ims.rcsconfig@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.imsrtpservice@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.qti.latency@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.ant@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.imscmservice@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.imscmservice@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/com.qualcomm.qti.imscmservice@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.imscmservice@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/com.qualcomm.qti.uceservice@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/extractors/libmmparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/extractors/libmmparser.so \
     vendor/GM/GM8_sprout/proprietary/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/fm_helium.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
-	vendor/GM/GM8_sprout/proprietary/lib64/libFileMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libFileMux.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/lib-imscamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imscamera.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvideocodec.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvt.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtextutils.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtutils.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libFileMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libFileMux.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libOmxMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libOmxMux.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptXHD_encoder.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptX_encoder.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libbluetooth_qti.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libbluetooth_qti.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdiag_system.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libdpmctmgr.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdpmctmgr.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdpmfdmgr.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libdpmframework.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdpmframework.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdpmtcm.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libfm-hci.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimscamera_jni.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimsmedia_jni.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/liblocationservice_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liblocationservice_jni.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmmosal.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmmparser_lite.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libmmrtpdecoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmmrtpdecoder.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmmrtpencoder.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqmi_cci_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqmi_cci_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqspmsvc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqspmsvc.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqti-at.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqti-at.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqti-iopd-client_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqti-iopd-client_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqti-perfd-client_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqti-perfd-client_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqti-util_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqti-util_system.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqti_performance.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqti_performance.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libqti_vndfwk_detect.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsoftkeymaster.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsoftkeymaster.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvndfwk_detect_jni.qti.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librcc.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfdclient.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libwfdnative.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfdnative.so \
     vendor/GM/GM8_sprout/proprietary/lib64/libxt_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libxt_native.so \
-    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
-    vendor/GM/GM8_sprout/proprietary/product/bin/dpmd:$(TARGET_COPY_OUT_PRODUCT)/bin/dpmd \
-    vendor/GM/GM8_sprout/proprietary/product/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/dpm/dpm.conf \
-    vendor/GM/GM8_sprout/proprietary/product/etc/init/dpmd.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/dpmd.rc \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qti.dpmframework.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/dpmapi.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qcrilhook.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephonyservice.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
-    vendor/GM/GM8_sprout/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml \
-    vendor/GM/GM8_sprout/proprietary/product/framework/QtiTelephonyServicelibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/QtiTelephonyServicelibrary.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qti.dpmframework.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qualcomm.qti.uceservice-V2.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.qualcomm.qti.uceservice-V2.1-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qualcomm.qti.uceservice-V2.1-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.quicinc.cne.api-V1.1-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.quicinc.cne.api-V1.1-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.quicinc.cne.constants-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.quicinc.cne.constants-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.quicinc.cne.constants-V2.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.quicinc.cne.constants-V2.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/com.quicinc.cne.constants-V2.1-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.quicinc.cne.constants-V2.1-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/dpmapi.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/dpmapi.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/qcrilhook.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/qcrilhook.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/qti-telephony-common.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.data.factory-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.data.factory-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.data.factory-V2.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.data.factory-V2.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.alarm-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar:$(TARGET_`COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.connection-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.connection-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.connection-V1.1-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.connection-V1.1-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.data.latency-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.data.latency-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.factory-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.factory-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.factory-V1.1-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.factory-V1.1-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.ims.callinfo-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.ims.callinfo-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.latency-V2.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.latency-V2.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/framework/vendor.qti.voiceprint-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.qti.voiceprint-V1.0-java.jar \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.ant@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.bluetooth_audio@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.dpm.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.imscmservice@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.imscmservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.imscmservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.imscmservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.imscmservice@2.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.imscmservice@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.uceservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.qualcomm.qti.uceservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.qualcomm.qti.uceservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.api@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.api@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.constants@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.constants@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.constants@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.constants@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.constants@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.constants@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.server@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.server@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.server@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.server@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.server@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/com.quicinc.cne.server@2.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/com.quicinc.cne.server@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/lib-imscamera.so:$(TARGET_COPY_OUT_PRODUCT)/lib/lib-imscamera.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/lib-imsvideocodec.so:$(TARGET_COPY_OUT_PRODUCT)/lib/lib-imsvideocodec.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/lib-imsvt.so:$(TARGET_COPY_OUT_PRODUCT)/lib/lib-imsvt.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/lib-imsvtextutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib/lib-imsvtextutils.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/lib-imsvtutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib/lib-imsvtutils.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libQTEEConnector_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libQTEEConnector_system.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libdiag_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdiag_system.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libdpmctmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdpmctmgr.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libdpmfdmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdpmfdmgr.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libdpmframework.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdpmframework.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libdpmtcm.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdpmtcm.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libimscamera_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libimscamera_jni.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libimsmedia_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libimsmedia_jni.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libsecureui_svcsock_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsecureui_svcsock_system.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/libsecureuisvc_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsecureuisvc_jni.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.color@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.color@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.color@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.data.factory@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.data.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.data.factory@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.display.postproc@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.gnss@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.gnss@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.gnss@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.gnss@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.gnss@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.gnss@3.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.alarm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.bluetooth_sar@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.btconfigstore@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.btconfigstore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.connection@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.connection@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.dynamicdds@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.iwlan@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.latency@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.data.qmi@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.factory@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.factory@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.factory@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.fingerprint@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.fm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.iop@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.iop@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.perf@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.perf@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.am@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.am@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.ims@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.ims@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.ims@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.ims@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.ims@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.ims@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.ims@1.3.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.ims@1.3.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.ims@1.4.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.ims@1.4.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.ims@1.5.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.ims@1.5.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.ims@1.6.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.lpa@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.qtiradio@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.qtiradio@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.qtiradio@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.qtiradio@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.qtiradio@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.qtiradio@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.qtiradio@2.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.qtiradio@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.qtiradio@2.3.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.qtiradio@2.3.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.uim@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.uim@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.uim@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.qdutils_disp@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.qteeconnector@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.qteeconnector@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.sigma_miracast@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.tui_comm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.vpp@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.hardware.vpp@1.2.so \
-  	vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.ims.callinfo@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.ims.rcsconfig@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.imsrtpservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.imsrtpservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.imsrtpservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.latency@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib/vendor.qti.voiceprint@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.ant@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.imscmservice@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.imscmservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.imscmservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.imscmservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.imscmservice@2.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.imscmservice@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.uceservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.qualcomm.qti.uceservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.qualcomm.qti.uceservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.api@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.api@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.constants@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.constants@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.constants@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.constants@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.server@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.server@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.server@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.server@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.server@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/com.quicinc.cne.server@2.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/com.quicinc.cne.server@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/lib-imscamera.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/lib-imscamera.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/lib-imsvideocodec.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/lib-imsvt.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/lib-imsvtextutils.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/lib-imsvtutils.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libQTEEConnector_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libQTEEConnector_system.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libdiag_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdiag_system.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libdpmctmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmctmgr.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmfdmgr.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libdpmframework.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmframework.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdpmtcm.so \
-	vendor/GM/GM8_sprout/proprietary/product/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libimscamera_jni.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libimsmedia_jni.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libsecureui_svcsock_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsecureui_svcsock_system.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/libsecureuisvc_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsecureuisvc_jni.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.color@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.color@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.color@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.data.factory@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.data.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.data.factory@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.postproc@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.gnss@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.gnss@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.gnss@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.gnss@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.gnss@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.gnss@3.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.alarm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.btconfigstore@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.btconfigstore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.connection@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.connection@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.iwlan@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.latency@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.factory@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.factory@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.factory@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.fm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.fingerprint@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.iop@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.iop@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.perf@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.perf@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.am@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.am@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.ims@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.ims@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.ims@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.ims@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.ims@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.ims@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.ims@1.3.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.ims@1.3.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.ims@1.4.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.ims@1.4.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.ims@1.5.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.ims@1.5.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.ims@1.6.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.lpa@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.uim@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.uim@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.uim@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.qteeconnector@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.qteeconnector@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.sigma_miracast@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.vpp@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.hardware.vpp@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.ims.callinfo@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.imsrtpservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.latency@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/product/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.voiceprint@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.display.color@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.display.color@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.display.color@1.2.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.display.postproc@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.esepowermanager@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@1.2.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.gnss@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.data.latency@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.scve.panorama@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.scve.panorama@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.soter@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.soter@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.vpp@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.ims.callinfo@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.imsrtpservice@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.latency@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/DR_AP_Service:$(TARGET_COPY_OUT_VENDOR)/bin/DR_AP_Service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/KmInstallKeybox:$(TARGET_COPY_OUT_VENDOR)/bin/KmInstallKeybox \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/PktRspTest:$(TARGET_COPY_OUT_VENDOR)/bin/PktRspTest \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/SoterProvisioningTool:$(TARGET_COPY_OUT_VENDOR)/bin/SoterProvisioningTool \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/StoreKeybox:$(TARGET_COPY_OUT_VENDOR)/bin/StoreKeybox \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/athdiag:$(TARGET_COPY_OUT_VENDOR)/bin/athdiag \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/audioflacapp:$(TARGET_COPY_OUT_VENDOR)/bin/audioflacapp \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/btnvtool:$(TARGET_COPY_OUT_VENDOR)/bin/btnvtool \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/cnss_diag:$(TARGET_COPY_OUT_VENDOR)/bin/cnss_diag \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/cplay:$(TARGET_COPY_OUT_VENDOR)/bin/cplay \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/diag_callback_sample:$(TARGET_COPY_OUT_VENDOR)/bin/diag_callback_sample \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/diag_dci_sample:$(TARGET_COPY_OUT_VENDOR)/bin/diag_dci_sample \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/diag_klog:$(TARGET_COPY_OUT_VENDOR)/bin/diag_klog \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/diag_mdlog:$(TARGET_COPY_OUT_VENDOR)/bin/diag_mdlog \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/diag_socket_log:$(TARGET_COPY_OUT_VENDOR)/bin/diag_socket_log \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/diag_uart_log:$(TARGET_COPY_OUT_VENDOR)/bin/diag_uart_log \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/energy-awareness:$(TARGET_COPY_OUT_VENDOR)/bin/energy-awareness \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/e_loop:$(TARGET_COPY_OUT_VENDOR)/bin/e_loop \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/fm_qsoc_patches:$(TARGET_COPY_OUT_VENDOR)/bin/fm_qsoc_patches \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/fmconfig:$(TARGET_COPY_OUT_VENDOR)/bin/fmconfig \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/fmfactorytest:$(TARGET_COPY_OUT_VENDOR)/bin/fmfactorytest \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/fmfactorytestserver:$(TARGET_COPY_OUT_VENDOR)/bin/fmfactorytestserver \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/ftmdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/ftmdaemon \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hal_proxy_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/hal_proxy_daemon \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hbtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/hbtp_daemon \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hci_qcomm_init:$(TARGET_COPY_OUT_VENDOR)/bin/hci_qcomm_init \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint.fpc@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint.fpc@2.1-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.drm@1.2-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.2-service.widevine \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.gnss@2.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gnss@2.0-service-qti \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.keymaster@3.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@3.0-service-qti \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.power@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.power@1.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.thermal@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.thermal@1.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/android.hardware.vibrator@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.vibrator@1.0-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/qcrild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/qcrild \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/rild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/rild \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.dolby.hardware.dms@1.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.esepowermanager@1.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.gnss@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.gnss@1.0-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.alarm@1.0-service \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.factory@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.factory@1.0-service \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.iop@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.iop@2.0-service \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.perf@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.perf@2.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.perf@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.perf@1.0-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.soter@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.soter@1.0-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/hw/vendor.sw.swfingerprint@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.sw.swfingerprint@1.0-service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/icm:$(TARGET_COPY_OUT_VENDOR)/bin/icm \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/imsrcsd:$(TARGET_COPY_OUT_VENDOR)/bin/imsrcsd \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/ipacm-diag:$(TARGET_COPY_OUT_VENDOR)/bin/ipacm-diag \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/iwlist:$(TARGET_COPY_OUT_VENDOR)/bin/iwlist \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/mlid:$(TARGET_COPY_OUT_VENDOR)/bin/mlid \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-audio-ftm:$(TARGET_COPY_OUT_VENDOR)/bin/mm-audio-ftm \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-pp-dpps:$(TARGET_COPY_OUT_VENDOR)/bin/mm-pp-dpps \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-qcamera-app:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-app \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-qcamera-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-qjpeg-dec-test:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qjpeg-dec-test \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-qjpeg-enc-test:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qjpeg-enc-test \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-qomx-idec-test:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qomx-idec-test \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/mm-qomx-ienc-test:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qomx-ienc-test \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/mmid:$(TARGET_COPY_OUT_VENDOR)/bin/mmid \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/move_fp:$(TARGET_COPY_OUT_VENDOR)/bin/move_fp \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/pktlogconf:$(TARGET_COPY_OUT_VENDOR)/bin/pktlogconf \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/pm-proxy:$(TARGET_COPY_OUT_VENDOR)/bin/pm-proxy \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/pm-service:$(TARGET_COPY_OUT_VENDOR)/bin/pm-service \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/port-bridge:$(TARGET_COPY_OUT_VENDOR)/bin/port-bridge \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/power_off_alarm:$(TARGET_COPY_OUT_VENDOR)/bin/power_off_alarm \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/ppd_sun:$(TARGET_COPY_OUT_VENDOR)/bin/ppd_sun \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/ptt_socket_app:$(TARGET_COPY_OUT_VENDOR)/bin/ptt_socket_app \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/qjpeg-dma-test:$(TARGET_COPY_OUT_VENDOR)/bin/qjpeg-dma-test \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/qmi_simple_ril_test:$(TARGET_COPY_OUT_VENDOR)/bin/qmi_simple_ril_test \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/qrtr-cfg:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-cfg \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/qrtr-lookup:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-lookup \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/qrtr-ns:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-ns \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/qseecom_sample_client:$(TARGET_COPY_OUT_VENDOR)/bin/qseecom_sample_client \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/qti:$(TARGET_COPY_OUT_VENDOR)/bin/qti \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/resize_ext4:$(TARGET_COPY_OUT_VENDOR)/bin/resize_ext4 \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/sigma_dut:$(TARGET_COPY_OUT_VENDOR)/bin/sigma_dut \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/siGMa_dut:$(TARGET_COPY_OUT_VENDOR)/bin/siGMa_dut \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/spectraltool:$(TARGET_COPY_OUT_VENDOR)/bin/spectraltool \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/ssgqmigd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgqmigd \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/ssgtzd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgtzd \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/ssr_diag:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_diag \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/ssr_setup:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_setup \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/subsystem_ramdump:$(TARGET_COPY_OUT_VENDOR)/bin/subsystem_ramdump \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/tbaseLoader:$(TARGET_COPY_OUT_VENDOR)/bin/tbaseLoader \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/test_diag:$(TARGET_COPY_OUT_VENDOR)/bin/test_diag \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
-    vendor/GM/GM8_sprout/proprietary/vendor/bin/wcnss_service:$(TARGET_COPY_OUT_VENDOR)/bin/wcnss_service \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/vendor.qti.hardware.soter@1.0-provision:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.qti.hardware.soter@1.0-provision \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/vendor_cmd_tool:$(TARGET_COPY_OUT_VENDOR)/bin/vendor_cmd_tool \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/wcnss_filter:$(TARGET_COPY_OUT_VENDOR)/bin/wcnss_filter \
+    vendor/GM/GM8_sprout/proprietary/vendor/bin/wdsdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/wdsdaemon \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/wifidisplayhalservice:$(TARGET_COPY_OUT_VENDOR)/bin/wifidisplayhalservice \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/xtwifi-client:$(TARGET_COPY_OUT_VENDOR)/bin/xtwifi-client \
     vendor/GM/GM8_sprout/proprietary/vendor/bin/xtwifi-inet-agent:$(TARGET_COPY_OUT_VENDOR)/bin/xtwifi-inet-agent \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_General_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Global_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_workspaceFile.qwsp \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_General_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Global_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_workspaceFile.qwsp \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_General_cal.acdb \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Global_cal.acdb \
@@ -426,12 +351,67 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_workspaceFile.qwsp \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Bluetooth_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_General_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Global_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Handset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Hdmi_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Headset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_TMO_Speaker_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Bluetooth_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_General_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Global_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Handset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Hdmi_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Headset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Speaker_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Bluetooth_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_General_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Global_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Handset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Hdmi_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Headset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Speaker_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Bluetooth_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_General_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Global_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Handset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Hdmi_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Headset_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Speaker_cal.acdb \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_workspaceFile.qwsp \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/csidtg_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/csidtg_camera.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/csidtg_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/csidtg_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx214_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx214_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx230_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx230_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx230_qc2002_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx230_qc2002_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx230_qc2002_with_gyro_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx230_qc2002_with_gyro_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx258_bear_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_bear_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx258_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx258_mono_bear_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_bear_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx258_mono_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx298_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx298_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx298_gt24c64_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx298_gt24c64_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx318_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx318_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx362_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx362_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx362_chromatix_bear.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx362_chromatix_bear.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/imx378_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx378_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov13850_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13850_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov13850_q13v06k_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13850_q13v06k_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov2281_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov2281_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov2680_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov2680_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov4688_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov4688_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov5670_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov5670_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov5670_f5670bq_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov5670_f5670bq_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov5695_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov5695_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov7251_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov7251_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov8858_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov8858_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/ov8865_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov8865_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k2l7_8953_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l7_8953_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k2l7_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l7_chromatix.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3l8_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_chromatix.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3l8_f3l8yam_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_f3l8yam_chromatix.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3l8_holitech1_l2300_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_holitech1_l2300_chromatix.xml \
@@ -439,6 +419,11 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3l8_mono_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_mono_chromatix.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3l8_truly1_l2300_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_truly1_l2300_chromatix.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3l8_truly_l2300_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_truly_l2300_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3m2xm_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m2xm_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3m2xm_chromatix_bear.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m2xm_chromatix_bear.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3m2xx_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m2xx_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3p3sm_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3p3sm_chromatix.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/camera/s5k3p8sp_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3p8sp_chromatix.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile2.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile3.xml \
@@ -468,53 +453,51 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile6.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/diracmobile.config:$(TARGET_COPY_OUT_VENDOR)/etc/diracmobile.config \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.audio@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio@2.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/ftm_test_config_wcd9335:$(TARGET_COPY_OUT_VENDOR)/etc/ftm_test_config_wcd9335 \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/hbtpcfg.dat:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/hbtpcfg.dat \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/hbtpcfg2.dat:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/hbtpcfg2.dat \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/hbtpcfg_8917.dat:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/hbtpcfg_8917.dat \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/hbtpcfg_msm8937_800s_fhd.dat:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/hbtpcfg_msm8937_800s_fhd.dat \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/hbtpcfg_sdm450_801s_fhdp.dat:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/hbtpcfg_sdm450_801s_fhdp.dat \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/loader.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/loader.cfg \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/qtc800h.bin:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/qtc800h.bin \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/hbtp/qtc800s_dsp.bin:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/qtc800s_dsp.bin \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.widevine.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.gnss@2.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@2.0-service-qti.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@3.0-service-qti.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.power@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power@1.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.thermal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@1.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/android.hardware.vibrator@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.vibrator@1.0-service.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/imsdatadaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdatadaemon.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/imsqmidaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsqmidaemon.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/imsrcsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsrcsd.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/ipacm-diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipacm-diag.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@1.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.esepowermanager@1.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.gnss@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.gnss@1.0-service.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.factory@1.0-service.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service.rc \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@1.0-service.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/perf/perf-profile1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile1.conf \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/permissions/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/permissions/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/permissions/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/permissions/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/permissions/com.fingerprints.extension.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.fingerprints.extension.xml \
     vendor/GM/GM8_sprout/proprietary/vendor/etc/permissions/vendor.qti.hardware.factory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.qti.hardware.factory.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/qdcm_calib_data_otm1911_fhdplus_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_otm1911_fhdplus_video_mode_dsi_panel.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml \
-    vendor/GM/GM8_sprout/proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/sw_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sw_config.xml \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    vendor/GM/GM8_sprout/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
     vendor/GM/GM8_sprout/proprietary/vendor/firmware/a225_pfp.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a225_pfp.fw \
     vendor/GM/GM8_sprout/proprietary/vendor/firmware/a225_pm4.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a225_pm4.fw \
     vendor/GM/GM8_sprout/proprietary/vendor/firmware/a225p5_pm4.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a225p5_pm4.fw \
@@ -568,26 +551,22 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/firmware/sw_fp.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/sw_fp.b06 \
     vendor/GM/GM8_sprout/proprietary/vendor/firmware/sw_fp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/sw_fp.mdt \
     vendor/GM/GM8_sprout/proprietary/vendor/framework/com.fingerprints.extension.jar:$(TARGET_COPY_OUT_VENDOR)/framework/com.fingerprints.extension.jar \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.2-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.3-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/camera.device@3.4-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.4-external-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.4-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/camera.device@3.5-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.5-external-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.5-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.bluetooth_audio@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@2.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.uceservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.uceservice@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.uceservice@2.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/desktop.ini:$(TARGET_COPY_OUT_VENDOR)/lib/desktop.ini \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.api@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.api@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.api@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.constants@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.constants@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.constants@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.constants@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.constants@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.server@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.server@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.server@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.server@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/com.quicinc.cne.server@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.quicinc.cne.server@2.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/eglSubDriverAndroid.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libEGL_adreno.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv1_CM_adreno.so \
@@ -598,61 +577,90 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/ftm_fm_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/ftm_fm_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/activity_recognition.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/activity_recognition.msm8937.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.camera.provider@2.4-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.gnss@2.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gnss@2.0-impl-qti.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.gnss@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gnss@1.0-impl-qti.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@2.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.keymaster@3.0-impl-qti.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/audio.bluetooth_qti.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.bluetooth_qti.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.power@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.power@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.thermal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.thermal@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/android.hardware.vibrator@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.vibrator@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/audio.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/audio.r_submix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.r_submix.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/audio.usb.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.usb.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/camera.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.msm8937.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qualcomm.qti.ant@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/fingerprint.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/gatekeeper.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gatekeeper.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/gralloc.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/hwcomposer.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/keystore.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/memtrack.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/memtrack.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/power.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/power.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/power.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/power.qcom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/sensors.msm8937_64.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.msm8937_64.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/sound_trigger.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.msm8937.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.gnss@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.gnss@3.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/thermal.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/thermal.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.esepowermanager@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.gnss@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.gnss@1.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.factory@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.factory@1.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.fm@1.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.iop@2.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.soter@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vendor.sw.swfingerprint@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.sw.swfingerprint@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vibrator.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vibrator.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/hw/vulkan.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-dplmedia.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsSDP.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imscmservice.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsdpl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imsqimf.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsqimf.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imsrcs-v2.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsrcs-v2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imsrcsbaseimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsrcsbaseimpl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imsvtcore.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvtcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-imsxml.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsxml.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rtpcommon.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-rtpcore.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rtpcore.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-rtpdaemoninterface.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rtpdaemoninterface.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-rtpsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rtpsl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-siputility.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-siputility.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/lib-uceservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-uceservice.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAlacSwDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libApeSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libApeSwDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libC2D2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCB.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libChamomilePA.so:$(TARGET_COPY_OUT_VENDOR)/lib/libChamomilePA.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libDiracAPI_SHARED.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDiracAPI_SHARED.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libDRPlugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDRPlugin.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libFidoCrypto_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libFidoCrypto_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libFlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libFlacSwDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libGPQTEEC_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPQTEEC_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libGPTEE_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPTEE_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPreqcancel.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPreqcancel_svc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libI420colorconvert.so:$(TARGET_COPY_OUT_VENDOR)/lib/libI420colorconvert.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libMpeg4SwEncoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMpeg4SwEncoder.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxAacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAacDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxAacEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAacEnc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxAlacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAlacDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxAlacDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAlacDecSw.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxAmrDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAmrDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxAmrEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAmrEnc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxAmrwbplusDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAmrwbplusDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxApeDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxApeDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxApeDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxApeDecSw.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxCore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxCore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxDsdDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxDsdDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxEvrcDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxEvrcDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxEvrcEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxEvrcEnc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxG711Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxG711Dec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxG711Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxG711Enc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxQcelp13Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxQcelp13Dec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxQcelp13Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxQcelp13Enc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxSwVdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxSwVdec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxSwVencMpeg4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxSwVencMpeg4.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxVdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVdec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxVenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVenc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxVideoDSMode.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVideoDSMode.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxVpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVpp.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libOmxWmaDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxWmaDec.so \
@@ -661,6 +669,11 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libQTEEConnector_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQTEEConnector_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libRSDriver_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSDriver_adreno.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSecureUILib.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libStDrvInt.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libSubSystemShutdown.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSubSystemShutdown.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libUBWC.so:$(TARGET_COPY_OUT_VENDOR)/lib/libUBWC.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/lib_drplugin_server.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_drplugin_server.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/lib_remote_simlock.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_remote_simlock.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbrtac.so \
@@ -688,35 +701,798 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadreno_utils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libadsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_default_listener.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsprpc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libalarmservice_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libalarmservice_jni.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libarcsoft_antishaking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_antishaking.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_beautyshot.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_high_dynamic_range.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libarcsoft_low_light_shot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_low_light_shot.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libarcsoft_picselfie_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_picselfie_algorithm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudio_log_utils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioalsa.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libaudioparsers.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioparsers.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libbase64.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbase64.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libbatching.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbatching.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbccQTI.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libbt-hidlclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-hidlclient.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libbthost_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbthost_if.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbtnv.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libc2d30-a3xx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30-a3xx.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30_bltlib.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libcacertclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcacertclient.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libc2dcolorconvert.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2dcolorconvert.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcam.meiyan.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam.meiyan.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcam.meiyanHDR.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam.meiyanHDR.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcam_lowlight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam_lowlight.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcam_picselfie.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam_picselfie.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcapiv2svacnn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2svacnn.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2vop.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromaflash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromaflash.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsprpc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_csidtg_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_common.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_csidtg_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_cpp_preview.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_csidtg_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_postproc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_csidtg_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_preview.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_csidtg_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_4k_preview_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_4k_preview_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_4k_video_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_4k_video_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_default_preview_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_default_preview_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_default_video_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_default_video_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hdr_snapshot_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hdr_snapshot_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hdr_video_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hdr_video_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hfr_120_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hfr_120_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hfr_60_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hfr_60_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_hfr_90_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_hfr_90_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_zsl_preview_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_zsl_preview_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx214_zsl_video_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx214_zsl_video_lc898122.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_1080p_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_1080p_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_1080p_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_1080p_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_4k_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_4k_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_4k_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_4k_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_raw_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_raw_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_snapshot_downscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_snapshot_downscale.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_snapshot_upscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_snapshot_upscale.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_default_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_default_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_default_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_default_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hdr_snapshot_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hdr_snapshot_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hdr_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hdr_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_120_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_120_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_240_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_240_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_60_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_60_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_hfr_90_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_hfr_90_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_1080p_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_1080p_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_1080p_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_1080p_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_4k_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_4k_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_4k_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_4k_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_default_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_default_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_default_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_default_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hdr_snapshot_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hdr_snapshot_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hdr_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hdr_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_120_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_120_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_240_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_240_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_60_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_60_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_hfr_90_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_hfr_90_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_video_16M_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_video_16M_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_1080p_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_1080p_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_1080p_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_1080p_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_4k_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_4k_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_4k_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_4k_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_default_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_default_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_default_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_default_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hdr_snapshot_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hdr_snapshot_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hdr_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hdr_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_120_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_120_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_240_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_240_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_60_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_60_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_hfr_90_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_hfr_90_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_video_16M_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_video_16M_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_zsl_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_zsl_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_with_gyro_zsl_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_with_gyro_zsl_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_zsl_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_zsl_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_qc2002_zsl_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_qc2002_zsl_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_raw_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_raw_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_raw_hdr_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_raw_hdr_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_video_16M_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_video_16M_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_zsl_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_zsl_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx230_zsl_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx230_zsl_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_4k_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_4k_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_4k_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_4k_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_4k_preview_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_4k_preview_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_4k_video_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_4k_video_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_default_preview_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_default_preview_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_default_video_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_default_video_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_hfr_120_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_hfr_120_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_hfr_60_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_hfr_60_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_hfr_90_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_hfr_90_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_zsl_preview_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_zsl_preview_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_bear_zsl_video_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_bear_zsl_video_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_default_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_default_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_hfr_120_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_hfr_60_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_hfr_90_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_4k_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_4k_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_4k_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_4k_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_4k_preview_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_4k_preview_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_4k_video_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_4k_video_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_default_preview_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_default_preview_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_default_video_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_default_video_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_hfr_120_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_hfr_120_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_hfr_60_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_hfr_60_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_hfr_90_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_hfr_90_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_zsl_preview_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_zsl_preview_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_bear_zsl_video_lc898217xc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_bear_zsl_video_lc898217xc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_default_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_default_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_hfr_120_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_hfr_60_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_hfr_90_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_zsl_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_zsl_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_mono_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_mono_zsl_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_zsl_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_zsl_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx258_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx258_zsl_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_4K_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_4K_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_4K_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_4K_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_4K_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_4K_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_4K_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_4K_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hdr_snapshot_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hdr_snapshot_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hdr_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hdr_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hfr_120_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hfr_60_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_hfr_90_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_gt24c64_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_gt24c64_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hdr_snapshot_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hdr_snapshot_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hdr_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hdr_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hfr_120_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hfr_60_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_hfr_90_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx298_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx298_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_1080p_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_1080p_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_1080p_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_1080p_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_4k_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_4k_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_4k_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_4k_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_fullsize_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_fullsize_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_fullsize_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_fullsize_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_hfr_120_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_hfr_120_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_hfr_240_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_hfr_240_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_hfr_60_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_hfr_60_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx318_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx318_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_1080p_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_1080p_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_1080p_preview_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_1080p_preview_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_1080p_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_1080p_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_1080p_video_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_1080p_video_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_4k_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_4k_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_4k_preview_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_4k_preview_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_4k_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_4k_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_4k_video_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_4k_video_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_common_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_common_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_hfr_120_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_hfr_120_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_hfr_240_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_hfr_240_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_hfr_60_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_hfr_60_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_liveshot_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_liveshot_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_preview_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_preview_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_snapshot_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_snapshot_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_snapshot_downscale_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_snapshot_downscale_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_snapshot_hdr_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_snapshot_hdr_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_snapshot_upscale_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_snapshot_upscale_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_video_4k_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_video_4k_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_video_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_video_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_cpp_video_hdr_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_cpp_video_hdr_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_default_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_default_preview_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_default_preview_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_default_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_default_video_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_default_video_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_default_video_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_default_video_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_fullsize_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_fullsize_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_fullsize_preview_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_fullsize_preview_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_fullsize_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_fullsize_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_fullsize_video_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_fullsize_video_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hdr_snapshot_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hdr_snapshot_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hdr_snapshot_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hdr_snapshot_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hdr_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hdr_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hdr_video_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hdr_video_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_120_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_120_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_120_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_120_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_120_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_240_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_240_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_240_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_240_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_240_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_240_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_60_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_60_3a_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_60_3a_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_hfr_60_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_hfr_60_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_postproc_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_postproc_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_preview_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_preview_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_snapshot_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_snapshot_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_snapshot_hdr_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_snapshot_hdr_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_video_4k_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_video_4k_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx362_video_hdr_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx362_video_hdr_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_4K_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_4K_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_4K_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_4K_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_cpp_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_cpp_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hdr_snapshot_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hdr_snapshot_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hdr_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hdr_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_120_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_240.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_240_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_240_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_60_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_hfr_90_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_snapshot_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_video_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_video_hdr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_imx378_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx378_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_cpp_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_cpp_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_default_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_default_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_default_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_default_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_hfr_120_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_hfr_120_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_hfr_60_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_hfr_60_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_hfr_90_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_hfr_90_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_cpp_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_cpp_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_default_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_default_preview_bu64297.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_default_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_default_video_bu64297.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_120_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_hfr_120_bu64297.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_60_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_hfr_60_bu64297.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_90_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_hfr_90_bu64297.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_zsl_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_zsl_preview_bu64297.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_zsl_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_q13v06k_zsl_video_bu64297.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_zsl_preview_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_zsl_preview_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov13850_zsl_video_lc898212xd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13850_zsl_video_lc898212xd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2281_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2281_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_a3_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_a3_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov2680_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov2680_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_hfr_120_ad5823.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_hfr_120_ad5823.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_hfr_60_ad5823.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_hfr_60_ad5823.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_hfr_90_ad5823.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_hfr_90_ad5823.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_zsl_preview_ad5823.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_zsl_preview_ad5823.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov4688_zsl_video_ad5823.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov4688_zsl_video_ad5823.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_a3_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_a3_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_a3_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_a3_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_a3_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_a3_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_cpp_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_cpp_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_a3_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_a3_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_a3_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_a3_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_a3_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_a3_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_cpp_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_cpp_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_f5670bq_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_f5670bq_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5670_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5670_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_a3_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_a3_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_a3_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_a3_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_a3_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_a3_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_cpp_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_cpp_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov5695_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5695_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov7251_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov7251_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_a3_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_a3_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_a3_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8856_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_a3_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_a3_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_a3_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_a3_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_a3_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_a3_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8858_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8858_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_ds_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_us_chromatix.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_cpp_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_cpp_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_default_preview_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_default_preview_dw9714.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_default_video_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_default_video_dw9714.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_hfr_120_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_hfr_120_dw9714.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_hfr_60_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_hfr_60_dw9714.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_hfr_90_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_hfr_90_dw9714.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_video_full.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_ov8865_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8865_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_4k_preview_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_4k_preview_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_4k_video_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_4k_video_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_4k_preview_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_4k_preview_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_4k_video_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_4k_video_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_default_preview_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_default_preview_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_default_video_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_default_video_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_hfr_120_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_hfr_120_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_hfr_60_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_hfr_60_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_hfr_90_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_hfr_90_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_zsl_preview_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_zsl_preview_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_8953_zsl_video_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_8953_zsl_video_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_default_preview_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_default_preview_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_default_video_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_default_video_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_hfr_120_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_hfr_120_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_hfr_60_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_hfr_60_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_hfr_90_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_hfr_90_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_zsl_preview_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_zsl_preview_ak7371.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k2l7_zsl_video_ak7371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k2l7_zsl_video_ak7371.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3l8_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_common.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3l8_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_cpp_hfr_120.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3l8_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_cpp_hfr_60.so \
@@ -876,40 +1652,154 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3l8_truly_l2300_zsl_video_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_truly_l2300_zsl_video_dw9763.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3l8_zsl_preview_ak7345.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_zsl_preview_ak7345.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3l8_zsl_video_ak7345.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_zsl_video_ak7345.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_common_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_common_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_hfr_120_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_hfr_120_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_hfr_60_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_hfr_60_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_hfr_90_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_hfr_90_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_liveshot_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_liveshot_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_preview_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_preview_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_snapshot_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_snapshot_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_cpp_video_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_cpp_video_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_default_preview_dw9761b.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_default_preview_dw9761b.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_default_preview_dw9761b_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_default_preview_dw9761b_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_default_video_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_default_video_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_default_video_dw9761b.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_default_video_dw9761b.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_default_video_dw9761b_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_default_video_dw9761b_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_120_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_120_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_120_dw9761b.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_120_dw9761b.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_120_dw9761b_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_120_dw9761b_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_60_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_60_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_60_dw9761b.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_60_dw9761b.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_60_dw9761b_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_60_dw9761b_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_90_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_90_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_90_dw9761b.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_90_dw9761b.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_90_dw9761b_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_hfr_90_dw9761b_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_postproc_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_postproc_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_preview_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_preview_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_snapshot_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_snapshot_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_zsl_preview_dw9761b.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_zsl_preview_dw9761b.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_zsl_preview_dw9761b_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_zsl_preview_dw9761b_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_zsl_video_dw9761b.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_zsl_video_dw9761b.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xm_zsl_video_dw9761b_bear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xm_zsl_video_dw9761b_bear.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_1080p_preview_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_1080p_preview_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_1080p_video_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_1080p_video_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_4k_preview_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_4k_preview_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_4k_video_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_4k_video_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_snapshot_downscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_snapshot_downscale.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_snapshot_upscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_snapshot_upscale.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_cpp_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_default_preview_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_default_preview_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_default_video_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_default_video_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_hfr_120.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_hfr_120_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_hfr_120_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_hfr_60.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_hfr_60_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_hfr_60_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_hfr_90.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_hfr_90_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_hfr_90_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_video_4k.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_zsl_preview_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_zsl_preview_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3m2xx_zsl_video_ad5816g.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3m2xx_zsl_video_ad5816g.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_default_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_default_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_fullsize_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_fullsize_preview_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_fullsize_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_fullsize_video_3a.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p3sm_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p3sm_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_a3_default_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_a3_default_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_a3_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_a3_zsl_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_a3_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_a3_zsl_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_common.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_cpp_liveshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_cpp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_cpp_snapshot.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_cpp_video.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_postproc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_preview.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libchromatix_s5k3p8sp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3p8sp_snapshot.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcne.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneapiclient.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneoplookup.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libcneqmiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneqmiutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libconfigdb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libconfigdb.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libcppf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcppf.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libdapparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdapparamstorage.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdataitems.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libdiagjni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiagjni.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdisp-aba.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdpmqmihal.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrmfs.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrmtime.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libdrmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrmutils.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libdrplugin_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrplugin_client.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libdsd2pcm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsd2pcm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsi_netctrl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsutils.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libevent_observer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libevent_observer.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libfastcrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcrc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvadsp_stub.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvopt.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libfastrpc_utf_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastrpc_utf_stub.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libflash_gpio.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflash_gpio.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libflash_pmic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflash_pmic.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libft2vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libft2vendor.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libflp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflp.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libgarden.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgarden.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgcs-calwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs-calwrapper.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgcs-ipc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs-ipc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgcs-osal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs-osal.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgcs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgdtap.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgeofencing.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgeofencing.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgeofence.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libgnss.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgnss.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libgnsspps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgnsspps.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libgps.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgps.utils.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgpustats.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpustats.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgpu_tonemapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpu_tonemapper.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libgrallocutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgrallocutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libhdcpsrm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdcpsrm.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libhbtpclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhbtpclient.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libhbtpdsp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhbtpdsp.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libhbtpfrmwk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhbtpfrmwk.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_tm.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libicuuc-v27.so:$(TARGET_COPY_OUT_VENDOR)/lib/libicuuc-v27.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libidl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib/libizat_client_api.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libizat_core.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libjnihelper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjnihelper.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libjpegdhw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdhw.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libjpegdmahw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdmahw.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libjpegehw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegehw.so \
@@ -917,13 +1807,15 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterprovision.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblbs_core.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libllvd_smore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvd_smore.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libllvd_sw_tnr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvd_sw_tnr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/liblistenjni.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblistenjni.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/liblistensoundmodel2.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblistensoundmodel2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-glnext.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-qcom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libllvm-qgl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-qgl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_api_v02.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libloc_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_core.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libloc_ds_api.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_ds_api.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libloc_externalDr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_externalDr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libloc_externalDrcore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_externalDrcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/liblocation_api.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblocation_api.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblocationservice.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblocationservice_glue.so \
@@ -932,10 +1824,10 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblqe.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdmdetect.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdsprpc.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libminikin-v27.so:$(TARGET_COPY_OUT_VENDOR)/lib/libminikin-v27.so \
-	vendor/GM/GM8_sprout/proprietary/vendor/lib/libshim_camera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libshim_camera.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libminksocket.so:$(TARGET_COPY_OUT_VENDOR)/lib/libminksocket.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-color-convertor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmm-omxcore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-omxcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-qcamera.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera2_c2d_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_c2d_module.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera2_cpp_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_cpp_module.so \
@@ -954,8 +1846,6 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera2_stats_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_algorithm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera2_stats_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_modules.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_atmel_at24c32e_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_cac3_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_cac3_lib.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_chromaflash_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_chromaflash_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_csidtg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_csidtg.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dbg.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_dcrf_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dcrf_lib.so \
@@ -1009,7 +1899,6 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_isp_mce40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_mce40.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_isp_mesh_rolloff40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_mesh_rolloff40.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_isp_rs_stats44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_rs_stats44.so \
-	vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sw_tnr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sw_tnr.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_isp_scaler_encoder44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_encoder44.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_isp_scaler_viewfinder44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_viewfinder44.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_isp_sce40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_sce40.so \
@@ -1018,18 +1907,11 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_isp_wb40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_wb40.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_le2464c_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_le2464c_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_le2464c_master_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_le2464c_master_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_llvd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_llvd.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_onsemi_cat24c16_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_onsemi_cat24c16_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_onsemi_cat24c32_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_onsemi_cat24c32_imx362_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_onsemi_cat24c32_imx362_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_optizoom_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_optizoom_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov13850.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13850.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov13850_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13850_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov13850_q13v06k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13850_q13v06k.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov13855_qtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_qtech.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov13855_qtech_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_qtech_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov13855_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_sunny.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov13855_sunny_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_sunny_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov2281.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov2281.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov2680.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov2680.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov2685.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov2685.so \
@@ -1038,10 +1920,6 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov4688_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov4688_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov5645.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5645.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov5670.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5670.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov5675.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5675.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov5675_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5675_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov5675_ofilm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5675_ofilm.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov5675_ofilm_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5675_ofilm_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov5695.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5695.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov7251.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov7251.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ov8856.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov8856.so \
@@ -1051,24 +1929,17 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_pdaf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdaf.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_pdafcamif.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdafcamif.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ppbase_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ppbase_module.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ppeiscore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ppeiscore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_qtech_f3l8yam_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_qtech_f3l8yam_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_qtech_f5670bq_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_qtech_f5670bq_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_quadracfa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_quadracfa.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k2l7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k2l7.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l2.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l2_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l2_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_holitech1_l2300.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_holitech1_l2300.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_holitech1_l2300_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_holitech1_l2300_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_holitech_l2300.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_holitech_l2300.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_holitech_l2300_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_holitech_l2300_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_mono.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_mono.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_ofilm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_ofilm.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_ofilm_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_ofilm_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_ofilm_riva.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_ofilm_riva.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_ofilm_riva_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_ofilm_riva_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_truly1_l2300.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_truly1_l2300.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_truly1_l2300_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_truly1_l2300_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3l8_truly_l2300.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_truly_l2300.so \
@@ -1077,21 +1948,10 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3m2xx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3m2xx.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3p3sm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3p3sm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k3p8sp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3p8sp.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_ofilm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_ofilm.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_ofilm_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_ofilm_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_ofilm_riva.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_ofilm_riva.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_ofilm_riva_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_ofilm_riva_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_qtech_riva.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_qtech_riva.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_qtech_riva_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_qtech_riva_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_sunny.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_s5k5e8_sunny_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_sunny_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sony_imx214_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sony_imx214_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sony_imx298_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sony_imx298_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sony_imx378_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sony_imx378_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sonyimx135_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sonyimx135_eeprom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_stillmore_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_stillmore_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sunny_8865_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_8865_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sunny_gt24c64_imx298_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_gt24c64_imx298_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_sunny_gt24c64_s5k2l7_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_gt24c64_s5k2l7_eeprom.so \
@@ -1102,36 +1962,34 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_thread_services.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_thread_services.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_algo.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_bg_pca_algo.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_trueportrait_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_trueportrait_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_truly_cma481_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_truly_cma481_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_truly_cmb433_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_truly_cmb433_eeprom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_tuning_lookup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning_lookup.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmcamera_ubifocus_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ubifocus_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmjpeg_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg_interface.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal_proprietary.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmqjpeg_codec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpeg_codec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmmqjpegdma.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpegdma.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libmulawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmulawdec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libnetmgr_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr_common.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libnetmgr_nr_fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr_nr_fusion.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libnetmgr_rmnet_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr_rmnet_ext.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libnlnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnlnetmgr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/liboemaids_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemaids_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libois_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libois_lc898122.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/liboptizoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboptizoom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libpdmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpdmapper.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libpdnotifier.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpdnotifier.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfconfig.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfgluelayer.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperipheral_client.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libpvr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpvr.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcci_legacy.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqcmaputils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcmaputils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqcrilFramework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrilFramework.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libqcrildatactl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrildatactl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libqdMetaData.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdMetaData.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdi.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libqdma_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdma_file_agent.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdp.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqdutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqisl.so \
@@ -1148,14 +2006,16 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqomx_jpegenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc_pipe.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqrtr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqrtr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libqservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqservice.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libqsocket.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqsocket.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqti-iopd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-iopd-client.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd-client.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-util.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti_vndfwk_detect.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libqti-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-utils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtigef.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtikeymaster4.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/librcc.so:$(TARGET_COPY_OUT_VENDOR)/lib/librcc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libquipc_os_api.so:$(TARGET_COPY_OUT_VENDOR)/lib/libquipc_os_api.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libremosaic_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libremosaic_daemon.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libril-qc-hal-qmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qc-hal-qmi.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libril-qc-ltedirectdisc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qc-ltedirectdisc.so \
@@ -1168,41 +2028,51 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno_sha1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libscalar.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscalar.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveBlobDescriptor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveBlobDescriptor.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveBlobDescriptor_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveBlobDescriptor_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveCommon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveCommon.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveCommon_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveCommon_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveObjectSeGMentation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectSeGMentation.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveObjectSeGMentation_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectSeGMentation_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveObjectTracker.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectTracker.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscveObjectTracker_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectTracker_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscvePanorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscvePanorama.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libscvePanorama_lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscvePanorama_lite.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdedrm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdedrm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-color.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-diag.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdm-disp-apis.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-disp-apis.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdm-disp-vndapis.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-disp-vndapis.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdmcore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmextension.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmutils.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdsprpc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecureui.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecureui_svcsock.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libseemore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libseemore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsensor_cit.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_cit.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsensor_crosstalk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_crosstalk.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_reg.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsensor_test.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_test.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsensor_user_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_user_cal.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsettings.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsettings.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libskia.so:$(TARGET_COPY_OUT_VENDOR)/lib/libskia.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsi.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libslimclient.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsmwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmwrapper.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libstagefright_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_omx.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libstagefright_soft_ddpdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_ddpdec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libstagefright_soft_qtiflacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_qtiflacdec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libstagefrightdolby.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrightdolby.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrighthw.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libstreamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstreamparser.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libsubsystem_control.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsubsystem_control.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsurround_3mic_proc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsurround_3mic_proc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libswvdec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsystem_health_mon.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalclient.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libthermalfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalfeature.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtime_genoff.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyxml2_1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libtrueportrait.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtrueportrait.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libts_detected_face_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libts_detected_face_hal.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libts_face_beautify_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libts_face_beautify_hal.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtzdrmgenprov.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libulp2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libulp2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvndfwk_detect_jni.qti.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpplibrary.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libvpptestutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpptestutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libwfdhaldsmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhaldsmanager.so \
@@ -1213,9 +2083,14 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwqe.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxml.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxtadapter.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxtwifi_ulp_adaptor.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libdrmclearkeyplugin.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/modules/pronto/pronto_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/pronto/pronto_wlan.ko \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcdrm/playready/lib/libtzplayready_customer.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/qcrild_librilutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcrild_librilutils.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/qtibus.so:$(TARGET_COPY_OUT_VENDOR)/lib/qtibus.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/qtimutex.so:$(TARGET_COPY_OUT_VENDOR)/lib/qtimutex.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libapps_mem_heap.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libapps_mem_heap.so \
@@ -1223,51 +2098,47 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libfastcvadsp.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libfastcvadsp_skel.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libscveBlobDescriptor_skel.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libscveObjectSeGMentation_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libscveObjectSeGMentation_skel.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/libscveT2T_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libscveT2T_skel.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/rfsa/adsp/tas2560.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/tas2560.bin \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/sensor_calibrate.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensor_calibrate.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.ssc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libasphere.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libdirac.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdirac.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiopreprocessing.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcbassboost.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libqcompostprocbundle.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcompostprocbundle.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libqcomvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcomvisualizer.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libqcomvoiceprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcomvoiceprocessing.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcreverb.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcvirt.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/soundfx/libswdap.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libswdap.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.2.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.display.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.display.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.display.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.postproc@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.dolby.hardware.dms@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.dolby.hardware.dms@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.data.factory@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.data.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.data.factory@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.esepowermanager@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.gnss@3.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@3.0-service.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@3.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.alarm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_audio@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_dun@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_dun@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.btconfigstore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.cacert@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.cacert@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.device@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.connection@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.connection@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.dynamicdds@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.iwlan@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.latency@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.qmi@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.factory@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.factory@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.factory@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fm@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.iop@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.iop@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.perf@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.perf@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.qdutils_disp@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.qteeconnector@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.am@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.am@1.0.so \
@@ -1277,46 +2148,25 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.3.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.4.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.5.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.6.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.lpa@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.3.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.sigma_miracast@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.sensorscalibrate@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.soter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.soter@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.tui_comm@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.wifi.hostapd@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.wifi.keystore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.wifi.keystore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.hardware.wifi.supplicant@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.wifi.supplicant@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.ims.callinfo@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.ims.rcsconfig@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.imsrtpservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.imsrtpservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.imsrtpservice@2.1-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.imsrtpservice@2.1-service-Impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.imsrtpservice@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.imsrtpservice@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.latency@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.voiceprint@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.2-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.3-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/camera.device@3.4-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-external-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/camera.device@3.5-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-external-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib/vendor.sw.swfingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.sw.swfingerprint@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.fingerprints.extension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints.extension@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.ant@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so \
@@ -1324,9 +2174,7 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@2.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.uceservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.uceservice@2.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/eglSubDriverAndroid.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libEGL_adreno.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/egl/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv1_CM_adreno.so \
@@ -1337,60 +2185,87 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/ftm_fm_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/ftm_fm_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/activity_recognition.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/activity_recognition.msm8937.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.4-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.gnss@2.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@2.0-impl-qti.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.gnss@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@1.0-impl-qti.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/audio.bluetooth_qti.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.bluetooth_qti.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.power@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.power@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.thermal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.thermal@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/android.hardware.vibrator@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.vibrator@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/audio.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/audio.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/audio.r_submix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.r_submix.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/audio.usb.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.usb.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/consumerir.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/consumerir.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/gatekeeper.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8937.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/gf_fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gf_fingerprint.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/gralloc.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/hwcomposer.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/keystore.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/keystore.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/memtrack.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/memtrack.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/power.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/power.default.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/power.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/power.qcom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/sensors.msm8937_64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.msm8937_64.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/sound_trigger.primary.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.msm8937.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@3.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/thermal.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/thermal.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@1.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.factory@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.factory@1.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vibrator.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vibrator.default.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/hw/vulkan.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.msm8937.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-dplmedia.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsSDP.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imscmservice.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsdpl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imsqimf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsqimf.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imsrcs-v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsrcs-v2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imsrcsbaseimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsrcsbaseimpl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imsvtcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsvtcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-imsxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsxml.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcommon.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-rtpcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcore.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-rtpdaemoninterface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpdaemoninterface.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-rtpsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpsl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-siputility.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-siputility.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib-uceservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-uceservice.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAlacSwDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libApeSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libApeSwDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libChamomilePA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libChamomilePA.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libDRPlugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDRPlugin.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libFidoCrypto_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFidoCrypto_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libFlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFlacSwDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libGPQTEEC_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPQTEEC_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libGPTEE_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPTEE_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libI420colorconvert.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libI420colorconvert.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libMpeg4SwEncoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMpeg4SwEncoder.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxAacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAacDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxAacEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAacEnc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxAlacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAlacDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxAlacDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAlacDecSw.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxAmrDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAmrDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxAmrEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAmrEnc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxAmrwbplusDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAmrwbplusDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxApeDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxApeDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxApeDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxApeDecSw.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxCore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxCore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxEvrcDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxEvrcDec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxEvrcEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxEvrcEnc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxG711Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxG711Dec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxG711Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxG711Enc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxQcelp13Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxQcelp13Dec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxQcelp13Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxQcelp13Enc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxSwVdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxSwVdec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxSwVencMpeg4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxSwVencMpeg4.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxVdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxVdec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxVenc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxVenc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxVpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxVpp.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOmxWmaDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxWmaDec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
@@ -1399,6 +2274,10 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libRSDriver_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver_adreno.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStDrvInt.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libSubSystemShutdown.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSubSystemShutdown.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libUBWC.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libUBWC.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib_drplugin_server.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_drplugin_server.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/lib_remote_simlock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_remote_simlock.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdb-fts.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbloader.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbrtac.so \
@@ -1406,59 +2285,81 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_utils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libadsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsp_default_listener.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsprpc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libalarmservice_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalarmservice_jni.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudcal.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudio_log_utils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioalsa.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbatching.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatching.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libaudioparsers.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioparsers.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbase64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase64.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbccQTI.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbt-hidlclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-hidlclient.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbthost_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbthost_if.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbtnv.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libc2d30-a3xx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d30-a3xx.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d30_bltlib.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcacertclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcacertclient.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libc2dcolorconvert.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2dcolorconvert.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcapiv2svacnn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2svacnn.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2vop.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsprpc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneoplookup.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libcneqmiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneqmiutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libconfigdb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libconfigdb.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdapparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdapparamstorage.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdataitems.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdiag.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdiagjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdiagjni.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisp-aba.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdlbdsservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdlbdsservice.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpmqmihal.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdrmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmutils.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdrplugin_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrplugin_client.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsi_netctrl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsutils.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libevent_observer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libevent_observer.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libfastcrc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcrc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvadsp_stub.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvopt.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libfastrpc_utf_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastrpc_utf_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libflp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libflp.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgarden.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgarden.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgarden_haltests_e2e.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgarden_haltests_e2e.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgcs-calwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs-calwrapper.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgcs-ipc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs-ipc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgcs-osal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs-osal.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgcs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgdtap.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgeofencing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofencing.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgf_ca.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_ca.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgf_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_hal.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofence.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgnss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnss.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgnsspps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnsspps.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgoodixfingerprintd_binder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgoodixfingerprintd_binder.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgps.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgps.utils.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgpustats.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpustats.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgpu_tonemapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpu_tonemapper.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgrallocutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgrallocutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libhdcpsrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdcpsrm.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libhbtpclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhbtpclient.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libhbtpdsp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhbtpdsp.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libhbtpfrmwk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhbtpfrmwk.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_client_api.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libjnihelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjnihelper.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterprovision.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libkeystore-engine-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-engine-wifi-hidl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libkeystore-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-wifi-hidl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/liblistenjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblistenjni.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/liblistensoundmodel2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblistensoundmodel2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-glnext.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qcom.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libllvm-qgl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qgl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_v02.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libloc_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_core.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libloc_ds_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_ds_api.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libloc_externalDr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_externalDr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libloc_externalDrcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_externalDrcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/liblocation_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocation_api.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice_glue.so \
@@ -1467,43 +2368,35 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblqe.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmdetect.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libminksocket.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libminksocket.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-color-convertor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
-	vendor/GM/GM8_sprout/proprietary/vendor/lib64/libshim_camera.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libshim_camera.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmm-omxcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-omxcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera2_frame_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_frame_algorithm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera2_is.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_is.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera2_q3a_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_q3a_core.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera2_stats_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_stats_algorithm.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera_cac3_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_cac3_lib.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_dbg.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_algo.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_bg_pca_algo.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmsw_detail_enhancement.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_detail_enhancement.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmsw_math.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_math.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmsw_opencl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_opencl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmsw_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_platform.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmorpho_memory_allocator.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmorpho_memory_allocator.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmorpho_panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmorpho_panorama.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmorpho_panorama_gp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmorpho_panorama_gp.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libnetfilter_conntrack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetfilter_conntrack.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal_proprietary.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libmulawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmulawdec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libnetmgr_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_common.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libnetmgr_nr_fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_nr_fusion.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libnetmgr_rmnet_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_rmnet_ext.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libnfnetlink.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnfnetlink.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libnlnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnlnetmgr.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libops.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libops.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/liboemaids_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemaids_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libpdmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpdmapper.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libpdnotifier.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpdnotifier.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfconfig.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfgluelayer.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperipheral_client.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libpvr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpvr.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcci_legacy.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqcmaputils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcmaputils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqcrilFramework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcrilFramework.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqcrildatactl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcrildatactl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqdMetaData.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdMetaData.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdi.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqdma_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdma_file_agent.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdp.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqdutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
@@ -1516,15 +2409,16 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqmi_encdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_encdec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmiservices.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqrtr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqrtr.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqservice.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqsocket.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqsocket.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqti-iopd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-iopd-client.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd-client.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-util.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti_vndfwk_detect.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqti-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-utils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtigef.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/librcc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librcc.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libquipc_os_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libquipc_os_api.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libril-qc-hal-qmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-hal-qmi.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libril-qc-ltedirectdisc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-ltedirectdisc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libril-qc-qmi-1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-qmi-1.so \
@@ -1536,88 +2430,94 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librs_adreno_sha1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscalar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscalar.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveBlobDescriptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveBlobDescriptor.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveBlobDescriptor_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveBlobDescriptor_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveCommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveCommon.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveCommon_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveCommon_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveObjectSeGMentation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveObjectSeGMentation.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveObjectSeGMentation_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveObjectSeGMentation_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveObjectTracker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveObjectTracker.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscveObjectTracker_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveObjectTracker_stub.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscvePanorama.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscvePanorama.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libscvePanorama_lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscvePanorama_lite.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdedrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdedrm.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-color.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-diag.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdm-disp-apis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-disp-apis.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdm-disp-vndapis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-disp-vndapis.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdmcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmcore.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmextension.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmutils.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsensor_cit.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_cit.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsensor_crosstalk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_crosstalk.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_reg.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsensor_test.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_test.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsensor_user_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_user_cal.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorndkbridge.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsettings.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsettings.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsi.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsoftkeymaster.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsoftkeymaster.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libstagefright_soft_qtiflacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_soft_qtiflacdec.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libstagefrightdolby.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrightdolby.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libstreamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstreamparser.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsubsystem_control.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsubsystem_control.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswvdec.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalclient.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libthermalfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalfeature.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_vendor.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.fingerprint@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvndfwk_detect_jni.qti.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libulp2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libulp2.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpplibrary.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libvpptestutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpptestutils.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdhdcpcp.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libwifi-hal-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-qcom.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwvhidl.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_ulp_adaptor.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediadrm/libdrmclearkeyplugin.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/qcrild_librilutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrild_librilutils.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/qtibus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qtibus.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/qtimutex.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qtimutex.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/sensor_calibrate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensor_calibrate.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libasphere.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcbassboost.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcreverb.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libqcompostprocbundle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcompostprocbundle.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libqcomvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvisualizer.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libqcomvoiceprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvoiceprocessing.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcvirt.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/soundfx/libswdap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libswdap.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.display.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.display.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.display.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@1.0-impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.dolby.hardware.dms@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.data.factory@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.esepowermanager@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.gnss@3.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@3.0-service.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@3.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.alarm@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_dun@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_dun@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.btconfigstore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.cacert@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cacert@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.device@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.iwlan@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.factory@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.factory@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.factory@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.factory@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fm@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qteeconnector@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.am@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.am@1.0.so \
@@ -1627,64 +2527,69 @@ PRODUCT_COPY_FILES += \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.3.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.4.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.5.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.6.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.2.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sigma_miracast@1.0-impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sigma_miracast@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.soter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.soter@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.1.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.2.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.hostapd@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.keystore@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.wifi.supplicant@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.supplicant@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.callinfo@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.imsrtpservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@2.0.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so \
-    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@2.1.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so \
+    vendor/GM/GM8_sprout/proprietary/vendor/lib64/vendor.sw.swfingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.sw.swfingerprint@1.0.so \
     vendor/GM/GM8_sprout/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
+    vendor/GM/GM8_sprout/proprietary/vendor/radio/qcril_database/upgrade/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/upgrade/0_initial.sql \
+    vendor/GM/GM8_sprout/proprietary/vendor/radio/qcril_database/upgrade/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/upgrade/1_version_intro.sql \
+    vendor/GM/GM8_sprout/proprietary/vendor/radio/qcril_database/upgrade/upgrade/2_version_add_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/upgrade/2_version_add_wps_config.sql \
+    vendor/GM/GM8_sprout/proprietary/vendor/radio/qcril_database/upgrade/upgrade/3_version_update_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/upgrade/3_version_update_wps_config.sql
 
 PRODUCT_PACKAGES += \
-    libbtconfigstore \
-    libgpustats \
+    libantradio \
+    libsdm-disp-apis \
+    vendor.qti.hardware.fm@1.0 \
+    com.quicinc.cne.api@1.0 \
+    com.quicinc.cne.api@1.1 \
+    com.quicinc.cne.constants@1.0 \
+    com.quicinc.cne.constants@2.0 \
+    com.quicinc.cne.constants@2.1 \
+    com.quicinc.cne.server@1.0 \
+    com.quicinc.cne.server@2.0 \
+    com.quicinc.cne.server@2.1 \
+    com.quicinc.cne.server@2.2 \
+    libaudio_log_utils \
     libsdm-disp-vndapis \
     libthermalclient \
-    libtime_genoff \
-    libts_detected_face_hal \
-    libts_face_beautify_hal \
-    libloc_api_v02 \
-    WfdService \
-    CneApp \
-    FingerprintExtensionService \
-    IWlanService \
-    TimeService \
-    PowerOffAlarm \
+    com.quicinc.cne.api@1.0 \
+    com.quicinc.cne.api@1.1 \
+    com.quicinc.cne.constants@1.0 \
+    com.quicinc.cne.constants@2.0 \
+    com.quicinc.cne.constants@2.1 \
+    com.quicinc.cne.server@2.0 \
+    com.quicinc.cne.server@2.1 \
+    com.quicinc.cne.server@2.2 \
     QtiTelephonyService \
     datastatusnotification \
+    embms \
     imssettings \
     uceShimService \
+    CNEService \
+    WfdService \
+    dpmserviceapp \
     ims \
     qcrilmsgtunnel \
-    QPerformance \
-    UxPerformance \
-    WfdCommon \
-    CACertService \
-    vendor.qti.hardware.capabilityconfigstore-V1.0-java \
-    vendor.qti.hardware.capabilityconfigstore@1.0
+    ConnectionSecurityService \
+    FingerprintExtensionService \
+    PowerOffAlarm \
+    SSGTelemetryService \
+    TimeService \
+    TrustZoneAccessService \
+    WfdCommon
